@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/send_money.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Enviar Dinero</title>
+</head>
+<body>
+    <h1 class="text-center" >Enviar  Dinero </h1>
+
+<div>
+ <!--BARRA DE NAVEGACION-->
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../menu_principal.html"><img src="../img/1298057.png" width=" 50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../page/enviar_dinero.html">enviar dinero</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href= "../page/depositos.html">depositos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../page/ultimos_mov.html">Historial</a>
+          </li>
+        </ul>
+<form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Buscar">
+          <button class="btn btn-primary" type="button">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <h2>Enviar Dinero</h2>
+  <form>
+    <div class="form-group">
+      <label for="searchContact">Buscar en la agenda de transferencias:</label>
+      <input type="text" class="form-control" id="searchContact" placeholder="Search contact">
+    </div>
+    <button type="button" id="addContactButton" class="btn btn-primary">Agregar nuevo contacto</button>
+
+    <!-- Contenido del formulario -->
+    <div id="contactFormContainer" style="display: none;">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="fullName">Nombre y Apellido:</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="cbu">Número de CBU:</label>
+          <input type="text" id="cbu" name="cbu" required>
+        </div>
+        <div class="form-group">
+          <label for="alias">Alias:</label>
+          <input type="text" id="alias" name="alias" required>
+        </div>
+        <div class="form-group">
+          <label for="bankName">Nombre del Banco:</label>
+          <input type="text" id="bankName" name="bankName" required>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    
+    
+     
+    <h3>Contactos</h3>
+    <ul id="contactList" class="list-group">
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Macarena Diaz</span>
+          <span class="contact-details">N° de cuenta: 123456789 </span> 
+          <span class="contact-details">Alias: maca </span>
+          <span class="contact-details">Banco: Santander </span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Luz Maria Hernández</span>
+          <span class="contact-details">N° de cuenta: 42873916</span> 
+          <span class="contact-details">Alias: Mary </span>
+          <span class="contact-details">Banco: Falabella </span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Roberto Lagos</span>
+          <span class="contact-details">N° de cuenta: 75813469</span> 
+          <span class="contact-details">Alias: Roberto </span>
+          <span class="contact-details">Banco: Banco de Chile </span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Ana Arias</span>
+          <span class="contact-details">N° de cuenta: 14532864</span> 
+          <span class="contact-details">Alias: Any </span>
+          <span class="contact-details">Banco: Banco del estado </span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Cecia Hernández</span>
+          <span class="contact-details">N° de cuenta: 34587961</span> 
+          <span class="contact-details">Alias: Cecia </span>
+          <span class="contact-details">Banco: BCI </span>
+        </div>
+      </li>
+    </ul>
+    
+    <div id="transactionForm" style="display: none;">
+      <h3>Enviar dinero</h3>
+      <form id="transactionForm">
+        <label for="contactName">Nombre del contacto:</label>
+        <input type="text" id="contactName" disabled><br>
+        <label for="bank">Banco:</label>
+        <input type="text" id="bank" disabled><br>
+        <label for="amount">Cantidad a depositar:</label>
+        <input type="number" id="amount"><br>
+        <button type="submit" class="btn btn-primary">Enviar dinero</button>
+      </form>
+    </div>
+    
+  
+
+</div>
+
+
+
+
+
+
+
+<script src="/assets/js/enviar_dinero.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

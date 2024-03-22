@@ -1,0 +1,57 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(/assets/img/image-fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0px;
+  }
+h1 {
+  font-family: 'Franklin Gothic Medium';
+  text-align: center;
+}
+.navbar {
+  background-color: #40343eb8;
+}
+.navbar-brand img {
+  display: block; 
+  margin: auto; /* Centra la imagen horizontalmente */
+}
+
+.navbar-nav {
+  margin-right: auto; /* Empuja los elementos a la derecha */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Color del texto */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Color del texto al pasar el mouse */
+}
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .list-group-item {
+    border-color: #dee2e6; /* Color del borde */
+}
+
+/* Estilos para el botón */
+.btn-secondary {
+    margin-top: 20px; /* Espacio superior */
+}
+
+footer {
+  position: fixed; /* Establece el posicionamiento fijo */
+  bottom: 0; /* Lo coloca en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho */
+  background-color: transparent; /* Color de fondo */
+  color: black; /* Color del texto */
+  padding: 10px; /* Añade un poco de espacio interior */
+  text-align: center; /* Centra el texto */
+}
