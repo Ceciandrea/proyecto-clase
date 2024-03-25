@@ -46,12 +46,23 @@ body {
      margin-top: 20px; /* Espacio superior */
  }
 
- footer {
-   position: fixed; /* Establece el posicionamiento fijo */
-   bottom: 0; /* Lo coloca en la parte inferior */
-   width: 100%; /* Ocupa todo el ancho */
-   background-color: transparent; /* Color de fondo */
-   color: black; /* Color del texto */
-   padding: 10px; /* Añade un poco de espacio interior */
-   text-align: left; /* Centra el texto */
+ footer{
+  bottom: 0;
+  width: 100%;
+
+ }
+.footer-container {
+  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.contact-info, .social-media {
+justify-content: left;
+text-align: left;
+  margin: 10px;
+}
+.social-media a {
+  margin: 0 5px;
 }

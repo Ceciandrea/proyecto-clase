@@ -43,13 +43,20 @@
 
 <div class="container">
   <h2>Depositar</h2>
-  <h3 id="saldo"> Dinero en cuenta: 600000</h3>
-  <form>
+  <h3 id="saldo">Dinero en cuenta: <span id="cantidadDinero">600000</span></h3>
+  <form id="formDeposito">
     <div class="form-group">
       <label for="depositAmount">Monto a depositar:</label>
       <input type="number" class="form-control" id="depositAmount" placeholder="Enter amount">
     </div>
-    <button type="submit" class="btn btn-primary">Realizar depósito</button>
+    <div class="form-group">
+      <label for="depositType">Tipo de depósito:</label>
+      <select class="form-control" id="depositType">
+        <option value="propia">A cuenta propia</option>
+        <option value="terceros" src="/assets/page/enviar_dinero.html" >A terceros</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" id="realizarDeposito">Realizar depósito</button>
   </form>
 </div>
 
